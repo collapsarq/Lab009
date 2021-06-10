@@ -16,10 +16,16 @@ int main()
     printf("Input wide of first matrix: ");
     scanf("%d", &wide2);
 
-    if ((height1 != wide2) || (height2 != wide1))
+    if (height1 <= 0 || wide1 <= 0 || height2 <= 0 || wide2 <= 0)
+    {
+        printf("Error! Height of wide cannot be less or equal 0.");
+        
+        return -1;
+    }
+    else if ((height1 != wide2) || (height2 != wide1))
     {
         printf("Error! Invalid input.");
-            return -1;
+        return -2;
     }
 
     if (height1 >= wide1)
